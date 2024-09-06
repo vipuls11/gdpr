@@ -1,19 +1,20 @@
 import Minimenu from "./mini_menu/Minimenu"
 
 
-
-const Users = () => {
+const Reports = () => {
     const icon = "Assets/arrowdownload.svg"
     return (
         <div className="Dashboard">
             <div className="">
-                <Minimenu icon={icon} dashboard="Users" />
+                <Minimenu icon={icon} dashboard="Reports" />
             </div>
             <div className="Form_Dashboard">
-                Users
+                <div className="">
+
+                </div>
             </div>
         </div>
     )
 }
 
-export default Users
+export default Reports

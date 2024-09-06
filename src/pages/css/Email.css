@@ -1,0 +1,109 @@
+.recurrence-pattern {
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #666666;
+  border-radius: 8px;
+  position: relative;
+}
+
+.Email_container {
+  margin-top: 30px;
+}
+.Rec_h4 {
+  position: absolute;
+  top: -8px;
+  left: 24px;
+  padding: 2px 2px;
+  background-color: #fff;
+}
+.weeks {
+  width: 40px;
+}
+.frequency_radio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.days-of-week {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.labels {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.labels input[type="radio"] {
+  accent-color: #e31837;
+}
+
+.labels input[type="checkbox"] {
+  accent-color: #e31837;
+}
+
+.range_container {
+  margin: 50px 0px;
+}
+
+.range-of-recurrence {
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #666666;
+  border-radius: 8px;
+  position: relative;
+}
+
+.upper_range {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.start_date {
+  margin-top: 5px;
+}
+
+.Ran_h4 {
+  position: absolute;
+  top: -8px;
+  left: 24px;
+  padding: 2px 2px;
+  background-color: #fff;
+}
+
+.lower {
+  display: flex;
+  gap: 10px;
+  padding-left: 40%;
+  padding-right: 10%;
+}
+
+.occurence {
+  width: 20px;
+}
+
+/* Mobile devices (max-width: 767px) */
+@media only screen and (max-width: 767px) {
+  .recurrence-pattern {
+    width: 100%;
+  }
+
+  .range-of-recurrence {
+    width: 100%;
+  }
+
+  .lower {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+}

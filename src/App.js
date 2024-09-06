@@ -1,35 +1,52 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Outlet,
+} from "react-router-dom";
 import "./App.css";
 import Dashboard from "./pages/Dashboard";
-import Users from "./pages/Users";
-import Messages from "./pages/Messages";
-import Analytics from "./pages/Analytics";
-import FileManager from "./pages/FileManager";
-import Order from "./pages/Order";
-import Saved from "./pages/Saved";
-import Setting from "./pages/Setting";
 import Pagenotfound from "./pages/Pagenotfound";
 import Sidebar from "./component/Sidebar";
+import Login from "./loginpage/Login";
+import Header from "./component/Header";
+import Worldwide from "./pages/Worldwide";
+import Users from "./pages/Users";
+import Setup from "./pages/Setup";
+import Email from "./pages/Email";
+import Reports from "./pages/Reports";
+
+function Layout() {
+  return (
+    <div>
+      <Header />
+      <div className="" style={{ display: "flex" }}>
+        <Sidebar />
+        <div style={{ width: "100%" }}>
+          <Outlet />
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function App() {
   return (
-    <div className="" style={{ display: "flex" }}>
-      <Router>
-        <Sidebar />
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/users" element={<Users />} />
-          <Route path="/messages" element={<Messages />} />
-          <Route path="/analytics" element={<Analytics />} />
-          <Route path="/file-manager" element={<FileManager />} />
-          <Route path="/order" element={<Order />} />
-          <Route path="/saved" element={<Saved />} />
-          <Route path="/setting" element={<Setting />} />
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="worldwide" element={<Worldwide />} />
+          <Route path="users" element={<Users />} />
+          <Route path="setup" element={<Setup />} />
+          <Route path="email" element={<Email />} />
+          <Route path="report" element={<Reports />} />
           <Route path="*" element={<Pagenotfound />} />
-        </Routes>
-      </Router>
-    </div>
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 

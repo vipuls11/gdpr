@@ -1,0 +1,51 @@
+.Dashboard {
+  display: flex;
+  width: 100%;
+  padding-top: 80px;
+}
+.Form_Dashboard {
+  width: 100%;
+  margin: 14px 10px;
+  padding: 10px;
+  border: 2px solid #666666;
+  border-radius: 6px;
+  overflow-x: overlay;
+}
+.mini_header {
+  display: block;
+}
+.mini_header_mobile {
+  display: none;
+}
+/* Mobile devices (max-width: 767px) */
+@media only screen and (max-width: 767px) {
+  .Dashboard {
+    display: block;
+  }
+  .mini_header {
+    display: none;
+  }
+
+  .mini_header_mobile {
+    display: block;
+    width: 100%;
+  }
+  .Form_Dashboard {
+    overflow-x: overlay;
+  }
+}
+
+/* Tablet devices (min-width: 768px and max-width: 1023px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .Dashboard {
+    display: block;
+  }
+  .mini_header {
+    display: none;
+  }
+
+  .mini_header_mobile {
+    display: block;
+    width: 100%;
+  }
+}

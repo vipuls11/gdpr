@@ -1,0 +1,26 @@
+.main_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  border-top: 4px solid #e31837;
+  z-index: 200;
+}
+
+.User_logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.User_logo img {
+  width: 40px;
+}
+
+.header_logo img {
+  width: 180px;
+}
